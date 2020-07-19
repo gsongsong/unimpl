@@ -1,6 +1,7 @@
 # unimpl
 
-- `todo()` and `unimpl()` functions inspired by Rust [`todo!()`][todo] and [`unimplemented!()`][unimpl] macros
+- TypeScript `todo()` and `unimpl()` functions
+- Inspired by Rust [`todo!()`][todo] and [`unimplemented!()`][unimpl] macros
 - Can develop a project without type check errors
 
 [todo]: https://doc.rust-lang.org/std/macro.todo.html
