@@ -1,0 +1,19 @@
+{
+  "name": "unimpl",
+  "version": "1.0.0",
+  "description": "`todo()` and `unimpl()` inspired by Rust",
+  "main": "dist/index.js",
+  "scripts": {
+    "prettier": "npx prettier@2.0.5 src --write"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsongsong/unimpl.git"
+  },
+  "author": "Seokseong Jeon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gsongsong/unimpl/issues"
+  },
+  "homepage": "https://github.com/gsongsong/unimpl#readme"
+}
