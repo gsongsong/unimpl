@@ -4,7 +4,8 @@
   "description": "`todo()` and `unimpl()` inspired by Rust",
   "main": "dist/index.js",
   "scripts": {
-    "prettier": "npx prettier@2.0.5 src --write"
+    "prettier": "npx prettier@2.0.5 src --write",
+    "typedoc": "npx typedoc"
   },
   "repository": {
     "type": "git",
