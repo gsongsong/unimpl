@@ -38,6 +38,6 @@ function function3(): string {
   if (needToExit) {
     return 'Exit function here';
   }
-  return unreachable();
+  return unreachable(); // Throws an error 'Internal error: entered unreachable code'
 }
 ```
