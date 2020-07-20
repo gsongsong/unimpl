@@ -1,11 +1,12 @@
 # unimpl
 
-- TypeScript `todo()` and `unimpl()` functions
-- Inspired by Rust [`todo!()`][todo] and [`unimplemented!()`][unimpl] macros
+- TypeScript `todo()`, `unimpl()` and `unreachable()` functions
+- Inspired by Rust [`todo!()`][todo], [`unimplemented!()`][unimpl] and [`unreachable!()`][unreachable] macros
 - Can develop a project without type check errors
 
 [todo]: https://doc.rust-lang.org/std/macro.todo.html
 [unimpl]: https://doc.rust-lang.org/std/macro.unimplemented.html
+[unreachable]: https://doc.rust-lang.org/std/macro.unreachable.html
 
 # Install
 
@@ -30,5 +31,13 @@ function function2(): string {
   if (needToImplement) {
     return unimpl(); // Throws an error 'Not implemented'
   }
+}
+
+function function3(): string {
+  const needToExit = true;
+  if (needToExit) {
+    return 'Exit function here';
+  }
+  return unreachable();
 }
 ```
