@@ -10,7 +10,7 @@
  */
 export function todo(...args: any[]): never {
   const msg = 'Not yet implemented';
-  throw throwHelper(msg, ...args);
+  throw error(msg, ...args);
 }
 
 /**
@@ -24,10 +24,15 @@ export function todo(...args: any[]): never {
  * `unimplemented` makes no such claims.
  * Its message is 'not implemented'. Also some IDEs will mark {@link todo}s.
  */
-export function unimpl(...args: any[]): never {
+export function unimplemented(...args: any[]): never {
   const msg = 'Not implemented';
-  throw throwHelper(msg, ...args);
+  throw error(msg, ...args);
 }
+
+/**
+ * Shorthand of {@link unimplemented}
+ */
+export const unimpl = unimplemented;
 
 /**
  * Indicates unreachable code.
@@ -42,10 +47,18 @@ export function unimpl(...args: any[]): never {
  */
 export function unreachable(...args: any[]): never {
   const msg = 'Internal error: entered unreachable code';
-  throw throwHelper(msg, ...args);
+  throw error(msg, ...args);
 }
 
-function throwHelper(msg: string, ...args: any[]): Error {
+/**
+ * Shorthand of {@link unreachable}
+ */
+export const unreach = unreachable;
+
+/**
+ * @ignore
+ */
+function error(msg: string, ...args: any[]): Error {
   if (args.length === 0) {
     return Error(msg);
   }
