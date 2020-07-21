@@ -23,7 +23,7 @@ function todo() {
         args[_i] = arguments[_i];
     }
     var msg = 'Not yet implemented';
-    throw throwHelper.apply(void 0, __spreadArrays([msg], args));
+    throw error.apply(void 0, __spreadArrays([msg], args));
 }
 exports.todo = todo;
 /**
@@ -37,15 +37,19 @@ exports.todo = todo;
  * `unimplemented` makes no such claims.
  * Its message is 'not implemented'. Also some IDEs will mark {@link todo}s.
  */
-function unimpl() {
+function unimplemented() {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
         args[_i] = arguments[_i];
     }
     var msg = 'Not implemented';
-    throw throwHelper.apply(void 0, __spreadArrays([msg], args));
+    throw error.apply(void 0, __spreadArrays([msg], args));
 }
-exports.unimpl = unimpl;
+exports.unimplemented = unimplemented;
+/**
+ * Shorthand of {@link unimplemented}
+ */
+exports.unimpl = unimplemented;
 /**
  * Indicates unreachable code.
  *
@@ -63,10 +67,14 @@ function unreachable() {
         args[_i] = arguments[_i];
     }
     var msg = 'Internal error: entered unreachable code';
-    throw throwHelper.apply(void 0, __spreadArrays([msg], args));
+    throw error.apply(void 0, __spreadArrays([msg], args));
 }
 exports.unreachable = unreachable;
-function throwHelper(msg) {
+/**
+ * Shorthand of {@link unreachable}
+ */
+exports.unreach = unreachable;
+function error(msg) {
     var args = [];
     for (var _i = 1; _i < arguments.length; _i++) {
         args[_i - 1] = arguments[_i];

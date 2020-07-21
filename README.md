@@ -1,6 +1,6 @@
 # unimpl
 
-- TypeScript `todo()`, `unimpl()` and `unreachable()` functions
+- TypeScript `todo()`, `unimplemented()` and `unreachable()` functions
 - Inspired by Rust [`todo!()`][todo], [`unimplemented!()`][unimpl] and [`unreachable!()`][unreachable] macros
 - Can develop a project without type check errors
 
@@ -29,7 +29,7 @@ function function1(): string {
 function function2(): string {
   const needToImplement = true;
   if (needToImplement) {
-    return unimpl(); // Throws an error 'Not implemented'
+    return unimplemented(); // Throws an error 'Not implemented'
   }
 }
 

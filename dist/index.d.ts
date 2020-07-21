@@ -20,7 +20,11 @@ export declare function todo(...args: any[]): never;
  * `unimplemented` makes no such claims.
  * Its message is 'not implemented'. Also some IDEs will mark {@link todo}s.
  */
-export declare function unimpl(...args: any[]): never;
+export declare function unimplemented(...args: any[]): never;
+/**
+ * Shorthand of {@link unimplemented}
+ */
+export declare const unimpl: typeof unimplemented;
 /**
  * Indicates unreachable code.
  *
@@ -33,4 +37,8 @@ export declare function unimpl(...args: any[]): never;
  * If the determination that the code is unreachable proves incorrect, the program immediately terminates with throwing an error.
  */
 export declare function unreachable(...args: any[]): never;
+/**
+ * Shorthand of {@link unreachable}
+ */
+export declare const unreach: typeof unreachable;
 //# sourceMappingURL=index.d.ts.map
