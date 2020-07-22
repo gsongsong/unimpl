@@ -68,7 +68,7 @@
 					<h1>unimpl</h1>
 				</a>
 				<ul>
-					<li>TypeScript <code>todo()</code>, <code>unimpl()</code> and <code>unreachable()</code> functions</li>
+					<li>TypeScript <code>todo()</code>, <code>unimplemented()</code> and <code>unreachable()</code> functions</li>
 					<li>Inspired by Rust <a href="https://doc.rust-lang.org/std/macro.todo.html"><code>todo!()</code></a>, <a href="https://doc.rust-lang.org/std/macro.unimplemented.html"><code>unimplemented!()</code></a> and <a href="https://doc.rust-lang.org/std/macro.unreachable.html"><code>unreachable!()</code></a> macros</li>
 					<li>Can develop a project without type check errors</li>
 				</ul>
@@ -79,7 +79,7 @@
 				<a href="#usage" id="usage" style="color: inherit; text-decoration: none;">
 					<h1>Usage</h1>
 				</a>
-				<pre><code class="language-js"><span class="hljs-keyword">import</span> { todo, unimpl } <span class="hljs-keyword">from</span> <span class="hljs-string">'unimpl'</span>;
+				<pre><code class="language-js"><span class="hljs-keyword">import</span> { todo, unimplemented, unreachable } <span class="hljs-keyword">from</span> <span class="hljs-string">'unimpl'</span>;
 
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">function1</span>(<span class="hljs-params"></span>): <span class="hljs-title">string</span> </span>{
   <span class="hljs-keyword">const</span> needToImplement = <span class="hljs-literal">true</span>;
@@ -91,7 +91,7 @@
 <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">function2</span>(<span class="hljs-params"></span>): <span class="hljs-title">string</span> </span>{
   <span class="hljs-keyword">const</span> needToImplement = <span class="hljs-literal">true</span>;
   <span class="hljs-keyword">if</span> (needToImplement) {
-    <span class="hljs-keyword">return</span> unimpl(); <span class="hljs-comment">// Throws an error 'Not implemented'</span>
+    <span class="hljs-keyword">return</span> unimplemented(); <span class="hljs-comment">// Throws an error 'Not implemented'</span>
   }
 }
 
