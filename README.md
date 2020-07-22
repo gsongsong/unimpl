@@ -17,7 +17,7 @@ npm i unimpl
 # Usage
 
 ```js
-import { todo, unimpl } from 'unimpl';
+import { todo, unimplemented, unreachable } from 'unimpl';
 
 function function1(): string {
   const needToImplement = true;
