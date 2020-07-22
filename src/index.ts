@@ -10,7 +10,7 @@
  */
 export function todo(...args: any[]): never {
   const msg = 'Not yet implemented';
-  throw error(msg, ...args);
+  throw Error(msgHelper(msg, ...args));
 }
 
 /**
@@ -26,7 +26,7 @@ export function todo(...args: any[]): never {
  */
 export function unimplemented(...args: any[]): never {
   const msg = 'Not implemented';
-  throw error(msg, ...args);
+  throw Error(msgHelper(msg, ...args));
 }
 
 /**
@@ -47,7 +47,7 @@ export const unimpl = unimplemented;
  */
 export function unreachable(...args: any[]): never {
   const msg = 'Internal error: entered unreachable code';
-  throw error(msg, ...args);
+  throw Error(msgHelper(msg, ...args));
 }
 
 /**
@@ -58,9 +58,9 @@ export const unreach = unreachable;
 /**
  * @ignore
  */
-function error(msg: string, ...args: any[]): Error {
+function msgHelper(msg: string, ...args: any[]): string {
   if (args.length === 0) {
-    return Error(msg);
+    return msg;
   }
-  return Error(`${msg}: ${args.join(' ')}`);
+  return `${msg}: ${args.join(' ')}`;
 }

@@ -23,7 +23,7 @@ function todo() {
         args[_i] = arguments[_i];
     }
     var msg = 'Not yet implemented';
-    throw error.apply(void 0, __spreadArrays([msg], args));
+    throw Error(msgHelper.apply(void 0, __spreadArrays([msg], args)));
 }
 exports.todo = todo;
 /**
@@ -43,7 +43,7 @@ function unimplemented() {
         args[_i] = arguments[_i];
     }
     var msg = 'Not implemented';
-    throw error.apply(void 0, __spreadArrays([msg], args));
+    throw Error(msgHelper.apply(void 0, __spreadArrays([msg], args)));
 }
 exports.unimplemented = unimplemented;
 /**
@@ -67,21 +67,24 @@ function unreachable() {
         args[_i] = arguments[_i];
     }
     var msg = 'Internal error: entered unreachable code';
-    throw error.apply(void 0, __spreadArrays([msg], args));
+    throw Error(msgHelper.apply(void 0, __spreadArrays([msg], args)));
 }
 exports.unreachable = unreachable;
 /**
  * Shorthand of {@link unreachable}
  */
 exports.unreach = unreachable;
-function error(msg) {
+/**
+ * @ignore
+ */
+function msgHelper(msg) {
     var args = [];
     for (var _i = 1; _i < arguments.length; _i++) {
         args[_i - 1] = arguments[_i];
     }
     if (args.length === 0) {
-        return Error(msg);
+        return msg;
     }
-    return Error(msg + ": " + args.join(' '));
+    return msg + ": " + args.join(' ');
 }
 //# sourceMappingURL=index.js.map
